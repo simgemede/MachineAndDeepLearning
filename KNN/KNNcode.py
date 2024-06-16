@@ -19,3 +19,14 @@ plt.xlabel("Age")
 plt.ylabel("Glucose")
 plt.legend()
 plt.show()
+
+y = data.Outcome.values
+x_raw_data = data.drop(["Outcome"], axis = 1)
+
+x = (x_raw_data - np.min(x_raw_data))/(np.max(x_raw_data) - np.min(x_raw_data))
+
+print("Raw data before normalization:\n")
+print(x_raw_data.head())
+
+print("\n\n Data after normalization: \n")
+print(x.head())
