@@ -37,3 +37,10 @@ knn = KNeighborsClassifier(n_neighbors = 3)
 knn.fit(x_train, y_train)
 prediction = knn.predict(x_test)
 print("Verification test result of our test data for k=3:", knn.score(x_test, y_test))
+
+"""counter = 1
+for k in range(1, 11):
+    knn_new = KNeighborsClassifier(n_neighbors= k)
+    knn_new.fit(x_train, y_train)
+    print(counter, " ", "Accuracy rate: %", knn_new.score(x_test, y_test) * 100)
+    counter += 1"""
